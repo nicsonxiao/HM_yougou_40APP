@@ -1,0 +1,9 @@
+.myItem{
+  display: flex;
+  background-color: #f0f0f0;
+}
+.item{
+  flex: 1;
+  padding: 5rpx;
+  text-align: center;
+}
