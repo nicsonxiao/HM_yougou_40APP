@@ -1,0 +1,15 @@
+.search-bar {
+  height: 90rpx;
+  width: 100%;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+}
+.search-bar navigator {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15rpx;
+  color: #666;
+}

@@ -1,7 +1,42 @@
-<!--index.wxml-->
-<view class="myItem">
-  <view class="item">项目</view>
-  <view class="item">文件</view>
-  <view class="item">编辑</view>
-  <view class="item">工具</view>
+<!-- index.wxml -->
+<!-- <SearchInput inner-text="Some text"></SearchInput> -->
+<!-- 搜索栏 -->
+<view>
+  <search-input></search-input>
 </view>
+<!-- 轮播图 -->
+<swiper autoplay="true" class="swiper-list" indicator-dots="true" circular="true">
+  <swiper-item wx:for="{{swiper_list}}" wx:key="goods_id">
+    <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </navigator>
+  </swiper-item>
+</swiper>
+<!-- 分类菜单 -->
+<view class="cateList">
+  <block wx:for="{{cateList}}" wx:key="index">
+    <image src="{{item.image_src}}"></image>
+  </block>
+</view>
+<!-- 楼层信息开始 -->
+<view class="index_floor">
+  <view class="floor_group" wx:for="{{floorList}}" 
+  wx:for-item="item1" 
+  wx:for-index="index1" 
+  wx:key="floor_title">
+  <!-- 标题 -->
+  <view class="floor_title">
+    <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+  </view>
+  <!-- 内容 -->
+  <view class="floor_list">
+    <navigator wx:for="{{item1.product_list}}" 
+    wx:for-item="item2" wx:for-index="index2" 
+    wx:key="name" url="{{item2.navigator_url}}">
+      <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+    </navigator>
+  </view>
+  </view>
+  
+</view>
+<!-- 楼层信息结束 -->

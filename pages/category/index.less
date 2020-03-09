@@ -1,0 +1,55 @@
+page{
+    height: 100%;
+}
+.cates{
+    height: 100%;
+    .cates_container{
+        //括号里面的前后要加空格，和减号前后也要加空格
+        height: ~'calc( 100vh - 90rpx )';
+        display: flex;
+       .left_menu{
+        flex: 2;
+        background-color: #F3F3F3;
+        .menu_item{
+            margin: 10rpx 0;
+            height: 60rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30rpx;
+        }
+        .active{
+            color: var(--themeColor);
+            border-left: 5rpx solid currentColor;
+        }
+       } 
+       .right_content{
+        flex: 5;
+        .goods_group{
+            .goods_title{
+                height: 80rpx;
+                margin-bottom: 10rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30rpx;
+            }
+            .goods_list{
+                display: flex;
+                flex-wrap: wrap;
+                navigator{
+                    width: 33.33%;
+                    text-align: center;
+                    image{
+                        width: 50%;
+                    }
+                    .goods_name{
+                        font-size: 24rpx;
+                        color: #2e2e2e;
+                    } 
+                }
+            }
+        }
+       }
+    }
+}
