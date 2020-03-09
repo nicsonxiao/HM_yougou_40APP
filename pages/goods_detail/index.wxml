@@ -2,7 +2,7 @@
 <view class="detail_top">
     <view class="detail_swiper">
         <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}">
-            <swiper-item wx:for="{{goodsDetail.pics}}" wx:key="pics_id">
+            <swiper-item wx:for="{{goodsDetail.pics}}" wx:key="pics_id" bindtap="handlePreviewImage" data-url="{{item.pics_mid}}">
                 <image src="{{item.pics_mid}}" mode="widthFix"></image>
             </swiper-item>
         </swiper>
@@ -31,3 +31,20 @@
         <rich-text nodes="{{goodsDetail.goods_introduce}}"></rich-text>
     </view>
 </view>
+
+<!-- 底栏功能开始 -->
+<view class="btm_tool">
+    <view class="tool_item">
+        <view class="iconfont icon-lianxikefu"></view>
+        <text>联系客服</text>
+        <button open-type="contact"></button>
+    </view>
+    <navigator open-type="switchTab" url="/pages/cart/index"  class="tool_item">
+        <view class="iconfont icon-gouwuche"></view>
+        <text>购物车</text>
+    </navigator>
+    <view class="tool_item btn_car" bindtap="handleCarAdd">加入购物车</view>
+    <view class="tool_item btn_buy">立即购买</view>
+</view>
+
+<!-- 底栏功能结束 -->

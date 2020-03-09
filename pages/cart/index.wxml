@@ -1,2 +1,48 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 购物车内容 -->
+    <block wx:if="{{cart.length!==0}}">
+        <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+        <!-- 商品复选框 -->
+        <view class="item_chk">
+            <checkbox-group data-id="{{item.goods_id}}" bindchange="handleItemChange">
+                <checkbox checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+        </view>
+        <!-- 商品图片 -->
+        <view class="item_img">
+            <image src="{{item.goods_small_logo}}" mode="widthFix">
+            </image>
+        </view>
+        <!-- 商品信息 -->
+        <view class="item_info">
+            <view class="item_info_title">{{item.goods_name}}</view>
+            <view class="item_priAndNum">
+                <view class="item_price">￥{{item.goods_price}}</view>
+                <view class="item_num">
+                    <view class="num_edit" bindtap="handleNumEdit" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+                    <view class="num">{{item.num}}</view>
+                    <view class="num_edit" bindtap="handleNumEdit" data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    </block>
+
+    <block wx:else>
+        <image src="../../utils/timg.gif" mode="widthFix"> 
+        </image>
+    </block>
+<!-- 底栏工具栏 -->
+<view class="total_price">
+    <view class="all_chk">
+        <checkbox-group bindchange="handleAllChecked">
+            <checkbox checked="{{allChecked}}">全选</checkbox>
+        </checkbox-group>
+    </view>
+    <view class="all_price">
+        合计： <view class="price_text">￥{{totalPrice}}</view>
+    </view>
+    <view class="account">
+        去结算({{totalNum}})
+    </view>
+</view>
+

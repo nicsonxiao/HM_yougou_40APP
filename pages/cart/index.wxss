@@ -1,1 +1,143 @@
-/* pages/cart/index.wxss */
+page {
+  padding-bottom: 90rpx;
+}
+.cart_item {
+  display: flex;
+  padding: 20rpx;
+}
+.cart_item .item_chk {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_item .item_chk checkbox-group checkbox .wx-checkbox-input {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+}
+.cart_item .item_chk checkbox-group checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: var(--themeColor);
+}
+.cart_item .item_chk checkbox-group checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #fff;
+  font-size: 32rpx;
+}
+.cart_item .item_img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_item .item_img image {
+  width: 80%;
+}
+.cart_item .item_info {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart_item .item_info .item_info_title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 24rpx;
+  color: #434343;
+}
+.cart_item .item_info .item_priAndNum {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_item .item_info .item_priAndNum .item_price {
+  color: var(--themeColor);
+  font-size: 24rpx;
+}
+.cart_item .item_info .item_priAndNum .item_num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: normal;
+  color: #8a8a8a;
+}
+.cart_item .item_info .item_priAndNum .item_num .num_edit {
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  border: 1rpx solid #8a8a8a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_item .item_info .item_priAndNum .item_num .num {
+  width: 32rpx;
+  height: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 32rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  font-size: 30rpx;
+}
+.total_price {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.total_price .all_chk {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.total_price .all_chk checkbox-group {
+  font-size: 21rpx;
+  color: #8a8a8a;
+}
+.total_price .all_chk checkbox-group checkbox .wx-checkbox-input {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+}
+.total_price .all_chk checkbox-group checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: var(--themeColor);
+}
+.total_price .all_chk checkbox-group checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #fff;
+  font-size: 32rpx;
+}
+.total_price .all_price {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+.total_price .all_price .price_text {
+  font-size: 28rpx;
+  color: var(--themeColor);
+  font-weight: 600;
+}
+.total_price .account {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--themeColor);
+  font-size: 21rpx;
+  padding: 10rpx 0;
+  border-radius: 1000rpx;
+}

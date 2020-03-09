@@ -1,3 +1,6 @@
+page{
+  margin-bottom: 94rpx;
+}
 .detail_top {
   padding-bottom: 30rpx;
   border-bottom: 15rpx solid #f9f9f9;
@@ -9,8 +12,8 @@
       text-align: center;
 
       swiper-item {
-        img {
-          width: 60%;
+        image {
+          width: 70%;
         }
       }
     }
@@ -25,6 +28,7 @@
 
     .price {
       color: var(--themeColor);
+      // flex: 8;
     }
 
     .shareAndCollect {
@@ -32,13 +36,25 @@
       align-items: center;
 
       .share {
+        flex: 1;
+        position: relative;
+        margin-right: 20rpx;
 
         .iconfont.icon-fenxiang {}
 
-        button.default {}
+        button {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
       }
 
-      .iconfont.icon-shoucang {}
+      .iconfont.icon-shoucang {
+        flex: 1;
+      }
     }
   }
 
@@ -53,10 +69,68 @@
 }
 
 //图文详情
-.goods_info{
-.goods_info_title{
-  font-size: 28rpx;
-  line-height: 40rpx;
+.goods_info {
+  .goods_info_title {
+    font-size: 28rpx;
+    line-height: 40rpx;
+    text-align: center;
+    padding: 15rpx 0;
+  }
+}
+
+
+// 底栏工具栏开始
+.btm_tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // height: 94rpx;
+  padding: 20rpx;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-  padding: 15rpx 0;
-}}
+  border: 1rpx solid #DEDEDE;
+  font-size: 20rpx;
+
+  .tool_item {
+    position: relative;
+    .iconfont.icon-lianxikefu {}
+
+    text {}
+
+    button {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+
+  .btn_car {
+    // width: 196rpx;
+    height: 60rpx;
+    background: #FCAA23;
+    color: #fff;
+    font-size: 26rpx;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    // margin-right: 15rpx;
+    padding:0 20rpx;
+  }
+
+  .btn_buy {
+      width: 196rpx;
+      height: 60rpx;
+      background: #EA4350;
+      color:#fff;
+      font-size: 26rpx;
+      line-height: 60rpx;
+      border-radius: 30rpx;
+      padding:0 20rpx;
+  }
+}
